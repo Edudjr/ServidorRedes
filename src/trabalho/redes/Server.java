@@ -115,9 +115,9 @@ public class Server implements Runnable {
 	
 	public static void main(String[] args)throws Exception {  
 		
-		System.out.println("Iniciando Servidor.");
+		System.out.println("Iniciando Servidor na porta "+args[0]);
 		
-		Server servidor = new Server(2525);
+		Server servidor = new Server(Integer.parseInt(args[0]));
 		
 		servidor.start();
 		
